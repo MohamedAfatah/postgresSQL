@@ -172,6 +172,7 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml push node-app
 # in the server
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull # to make pull for all services ****** this is resk to make pull for all services
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull node-app # we can spcify the service name to pull the image for this service only 
+#very important to remove the container to apply the new image to the container :  docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d # this must recreat the container to apply the new image to the container
 
 # when the code is changed we must build the image in local 
